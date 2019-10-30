@@ -1,0 +1,46 @@
+{
+  "name": "anything-finder",
+  "version": "0.0.0",
+  "description": "My own website made with LitElement",
+  "author": "Marco Monzón",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "homepage": "https://marco238.github.io/marcomonzon/",
+  "scripts": {
+    "start": "es-dev-server --app-index index.html --node-resolve --open --watch",
+    "start:compatibility": "es-dev-server --app-index index.html --compatibility all --node-resolve --open --watch",
+    "test": "karma start --coverage",
+    "test:watch": "karma start --auto-watch=true --single-run=false",
+    "test:update-snapshots": "karma start --update-snapshots",
+    "test:prune-snapshots": "karma start --prune-snapshots",
+    "test:compatibility": "karma start --compatibility all --coverage",
+    "test:compatibility:watch": "karma start --compatibility all --auto-watch=true --single-run=false",
+    "lint": "eslint \"src/**/*.js\"",
+    "build": "babel src -d lib",
+    "bundle": "npm run build && rollup -c",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@open-wc/testing": "^2.0.0",
+    "@open-wc/testing-karma": "^3.0.0",
+    "babel-eslint": "^10.0.3",
+    "chalk": "^2.4.2",
+    "es-dev-server": "^1.5.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-lit": "^1.2.0",
+    "gh-pages": "^2.1.1",
+    "rollup": "^1.10.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "webpack-merge": "^4.1.5"
+  }
+}
