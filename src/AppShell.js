@@ -1,16 +1,18 @@
 import { html, css, LitElement } from 'lit-element';
 
+import './components/NavBar';
+
 class AppShell extends LitElement {
   static get styles() {
     return css`
       :host {
         display: block;
-        padding: 25px;
         --app-shell-h1-color: teal;
       }
 
       h1 {
         color: --app-shell-h1-color;
+        margin: 0;
       }
     `;
   }
@@ -28,6 +30,7 @@ class AppShell extends LitElement {
 
   render() {
     return html`
+      <nav-bar></nav-bar>
       <h1>${this.title}</h1>
     `;
   }
