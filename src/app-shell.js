@@ -1,38 +1,37 @@
 import { html, css, LitElement } from 'lit-element';
 
-import './components/NavBar';
+import './components/nav-bar';
+import { initRouter } from './router';
 
 class AppShell extends LitElement {
   static get styles() {
     return css`
       :host {
         display: block;
-        --app-shell-h1-color: teal;
-      }
-
-      h1 {
-        color: --app-shell-h1-color;
-        margin: 0;
       }
     `;
   }
 
   static get properties() {
     return {
-      title: { type: String }
+      
     };
   }
 
   constructor() {
     super();
-    this.title = 'marcomonzon';
   }
 
   render() {
     return html`
       <nav-bar></nav-bar>
-      <h1>${this.title}</h1>
+      <main></main>
     `;
+  }
+
+  firstUpdated() {
+    const node = this.shadowRoot.querySelector('main');
+    initRouter(node);
   }
 }
 
