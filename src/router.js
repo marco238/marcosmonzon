@@ -1,6 +1,6 @@
 import { Router } from '@vaadin/router';
 
-import './components/main-view';
+import './views/main-view';
 
 /**
  * Defines the App routes
@@ -24,11 +24,11 @@ export const initRouter = (node) => {
     //   action: () =>
     //     import('./views/training/'),
     // },
-    // {
-    //   path: '(.*)',
-    //   component: 'view-404',
-    //   action: () =>
-    //     import('./views/view-404.js'),
-    // },
+    {
+      path: '(.*)',
+      component: 'view-404',
+      action: () =>
+        import('./views/view-404.js'),
+    },
   ]);
-}
+};

@@ -1,6 +1,7 @@
 import { html, css, LitElement } from 'lit-element';
 
 import './components/nav-bar';
+import './components/social-media-bar';
 import { initRouter } from './router';
 
 class AppShell extends LitElement {
@@ -24,6 +25,7 @@ class AppShell extends LitElement {
 
   render() {
     return html`
+      <social-media-bar></social-media-bar>
       <nav-bar></nav-bar>
       <main></main>
     `;

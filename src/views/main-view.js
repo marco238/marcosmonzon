@@ -22,20 +22,21 @@ class MainView extends LitElement {
         }
 
         .presentation-text p {
-          font-size: 50px;
-          margin: 0 0 20px 0;
+          font-size: 46px;
+          margin: 0 0 15px 0;
         }
 
         .presentation-text h1 {
-          font-size: 68px;
+          font-family: 'Playfair Display', serif;
+          font-size: 62px;
           width: 380px;
           margin: 0 0 20px 0;
-          line-height: 60px;
+          line-height: 62px;
         }
 
         .presentation-text .description {
           display: block;
-          font-size: 32px;
+          font-size: 28px;
           width: 300px;
         }
 
@@ -130,7 +131,7 @@ class MainView extends LitElement {
       <div class="presentation-text">
         <p>I am,</p>
         <h1>MARCOS A. MONZÓN</h1>
-        <span class="description">I'm a Frontend Web Developer</span>
+        <span class="description"> => Frontend Web Developer</span>
         <div class="presentation-buttons">
           <a href="mailto:marcomonzip@gmail.com?Subject=Quiero%20contar%20con%20tus%20servicios">HIRE ME <span></span></a>
           <button>DOWNLOAD RESUME <span></span></button>
