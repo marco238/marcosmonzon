@@ -39,11 +39,10 @@ class MainView extends LitElement {
           width: 300px;
         }
 
-        .presentation-text button {
+        .presentation-text button, .presentation-text a {
           position: relative;
           font-size: 14px;
           margin: 20px 20px 0 0;
-          border: none;
           cursor: pointer;
         }
         
@@ -51,31 +50,33 @@ class MainView extends LitElement {
           outline: none;
         }
         
-        .presentation-text button:first-child {
+        .presentation-text a {
           background-color: var(--app-blue-color);
+          border: 1px solid var(--app-blue-color);
           color: var(--app-grey-color);
           padding: 10px 20px;
+          text-decoration: none;
         }
         
-        .presentation-text button:last-child {
+        .presentation-text button {
           background-color: transparent;
           border: 1px solid var(--app-blue-color);
           color: var(--app-blue-color);
           padding: 10px 15px;
         }
         
-        .presentation-text button:first-child span {
+        .presentation-text a span {
           width: 10px;
           height: 10px;
           position: absolute;
-          bottom: -6px;
-          right: -6px;
+          bottom: -7px;
+          right: -7px;
           background-color: var(--app-grey-color);
           border-top: 1px solid var(--app-grey-color);
           transform: rotate(-45deg);
         }
         
-        .presentation-text button:last-child span {
+        .presentation-text button span {
           width: 10px;
           height: 10px;
           position: absolute;
@@ -131,7 +132,7 @@ class MainView extends LitElement {
         <h1>MARCOS A. MONZÓN</h1>
         <span class="description">I'm a Frontend Web Developer</span>
         <div class="presentation-buttons">
-          <button>HIRE ME <span></span></button>
+          <a href="mailto:marcomonzip@gmail.com?Subject=Quiero%20contar%20con%20tus%20servicios">HIRE ME <span></span></a>
           <button>DOWNLOAD RESUME <span></span></button>
         </div>
       </div>
