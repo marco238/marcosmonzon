@@ -44,8 +44,12 @@ class MainView extends LitElement {
           font-size: 14px;
           margin: 20px 20px 0 0;
           border: none;
+          cursor: pointer;
         }
-
+        
+        .presentation-text button:focus { 
+          outline: none;
+        }
         
         .presentation-text button:first-child {
           background-color: var(--app-blue-color);

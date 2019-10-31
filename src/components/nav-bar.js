@@ -65,16 +65,16 @@ class NavBar extends LitElement {
         </div>
         <span class="social-media-text">SOCIAL MEDIA</span>
         <div class="social-links">
-          <a href="">
+          <a href="https://github.com/marco238" target="_blank">
             <img src="../../assets/images/github-icon.png" width="34" alt="Github icon">
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/marcomonzon/" target="_blank">
             <img src="../../assets/images/linkedin-icon.png" width="30" alt="Linkedin icon">
           </a>
-          <a href="">
+          <a href="mailto:marcomonzip@gmail.com?Subject=Vengo%20desde%20tu%20web">
             <img src="../../assets/images/email-icon.png" width="30" alt="Email icon">
           </a>
-          <a href="">
+          <a href="https://wa.me/692949758" target="_blank">
             <img src="../../assets/images/whatsapp-icon.png" width="30" alt="Whatsapp icon">
           </a>
         </div>
