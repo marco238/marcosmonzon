@@ -16,9 +16,21 @@ class MainView extends LitElement {
           color: #ffffff;
         }
 
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          66% { opacity:0; }
+          100% { opacity:1; }
+        }
+
+        @keyframes falling {
+          from { opacity: 0; margin-top: -300px; }
+          to { opacity: 1; margin-top: -50px; }
+        }
+
         .presentation-text {
           margin-top: -50px;
           margin-right: 50px;
+          animation: falling 0.5s ease;
         }
 
         .presentation-text p {
@@ -40,18 +52,24 @@ class MainView extends LitElement {
           width: 300px;
         }
 
-        .presentation-text button, .presentation-text a {
+        .presentation-buttons button, .presentation-buttons a {
           position: relative;
           font-size: 14px;
           margin: 20px 20px 0 0;
           cursor: pointer;
+          transition: all 0.1s ease;
+          border-radius: 0 0 10px 0;
+        }
+
+        .presentation-buttons button:hover, .presentation-buttons a:hover {
+          box-shadow: 0 0 10px var(--app-blue-color);
         }
         
-        .presentation-text button:focus { 
+        .presentation-buttons button:focus { 
           outline: none;
         }
         
-        .presentation-text a {
+        .presentation-buttons a {
           background-color: var(--app-blue-color);
           border: 1px solid var(--app-blue-color);
           color: var(--app-grey-color);
@@ -59,14 +77,14 @@ class MainView extends LitElement {
           text-decoration: none;
         }
         
-        .presentation-text button {
+        .presentation-buttons button {
           background-color: transparent;
           border: 1px solid var(--app-blue-color);
           color: var(--app-blue-color);
           padding: 10px 15px;
         }
         
-        .presentation-text a span {
+        .presentation-buttons a span {
           width: 10px;
           height: 10px;
           position: absolute;
@@ -77,7 +95,7 @@ class MainView extends LitElement {
           transform: rotate(-45deg);
         }
         
-        .presentation-text button span {
+        .presentation-buttons button span {
           width: 10px;
           height: 10px;
           position: absolute;
@@ -92,6 +110,7 @@ class MainView extends LitElement {
           position: relative;
           width: 500px;
           height: 400px;
+          animation: fadeIn 0.7s ease-in;
         }
 
         img:first-child {
@@ -133,8 +152,8 @@ class MainView extends LitElement {
         <h1>MARCOS A. MONZÓN</h1>
         <span class="description"> => Frontend Web Developer</span>
         <div class="presentation-buttons">
-          <a href="mailto:marcomonzip@gmail.com?Subject=Quiero%20contar%20con%20tus%20servicios">HIRE ME <span></span></a>
-          <button>DOWNLOAD RESUME <span></span></button>
+          <a href="mailto:marcomonzip@gmail.com?Subject=Quiero%20contar%20con%20tus%20servicios">HIRE ME</a>
+          <button>DOWNLOAD RESUME</button>
         </div>
       </div>
       <div class="feathers">
