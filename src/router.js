@@ -18,12 +18,12 @@ export const initRouter = (node) => {
       path: '/home',
       component: 'main-view',
     },
-    // {
-    //   path: '/training',
-    //   component: 'training-view',
-    //   action: () =>
-    //     import('./views/training/'),
-    // },
+    {
+      path: '/work',
+      component: 'work-view',
+      action: () =>
+        import('./views/work-view/work-view.js'),
+    },
     {
       path: '(.*)',
       component: 'view-404',
