@@ -15,11 +15,20 @@ class CardElement  extends LitElement {
           border-radius: 25px;
           overflow: hidden;
           box-shadow: 5px 5px 20px #00000058;
+          margin: 10px 20px;
+          animation: flipIn 0.5s ease;
         }
-
+        
+        @keyframes flipIn {
+          0% { transform: scaleX(0) }
+          70% { transform: scaleX(0) }
+          100% { transform: scaleX(1) }
+        }
+        
         .card-container {
-          background-size: 100%;
+          background-size: cover;
           filter: grayscale(0.3);
+          background-repeat: no-repeat;
           width: 100%;
           height: 100%;
         }
@@ -40,7 +49,7 @@ class CardElement  extends LitElement {
         }
 
         .card-info h2 {
-          margin: 0 0 10px 0;
+          margin: 5px 0 10px 0;
         }
 
         .card-info p {
@@ -54,12 +63,14 @@ class CardElement  extends LitElement {
           display: flex;
           position: absolute;
           bottom: -35px;
+          max-width: 150px;
+          overflow: hidden;
         }
 
         .logo {
-          width: 25px;
-          height: 25px;
-          margin-right: 3px;
+          width: 22px;
+          height: 22px;
+          margin-right: 5px;
           background-repeat: no-repeat;
           background-position: center;
         }

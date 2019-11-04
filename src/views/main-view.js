@@ -110,7 +110,7 @@ class MainView extends LitElement {
           position: relative;
           width: 500px;
           height: 400px;
-          animation: fadeIn 2s ease-in;
+          animation: fadeIn 1s ease-in;
         }
 
         img:first-child {

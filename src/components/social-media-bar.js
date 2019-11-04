@@ -66,16 +66,16 @@ class SocialMediaBar extends LitElement {
         <span class="social-media-text">SOCIAL MEDIA</span>
         <div class="social-links">
           <a href="https://github.com/marco238" target="_blank">
-            <img src="../../assets/images/github-icon.png" width="34" alt="Github icon">
+            <img src="../../assets/images/github-logo.svg" width="34" alt="Github icon">
           </a>
           <a href="https://www.linkedin.com/in/marcomonzon/" target="_blank">
-            <img src="../../assets/images/linkedin-icon.png" width="30" alt="Linkedin icon">
+            <img src="../../assets/images/linkedin-logo.svg" width="30" alt="Linkedin icon">
           </a>
           <a href="mailto:marcomonzip@gmail.com?Subject=Vengo%20desde%20tu%20web">
-            <img src="../../assets/images/email-icon.png" width="30" alt="Email icon">
+            <img src="../../assets/images/email-logo.svg" width="30" alt="Email icon">
           </a>
           <a href="https://wa.me/692949758" target="_blank">
-            <img src="../../assets/images/whatsapp-icon.png" width="30" alt="Whatsapp icon">
+            <img src="../../assets/images/whatsapp-logo.svg" width="30" alt="Whatsapp icon">
           </a>
         </div>
       </nav>

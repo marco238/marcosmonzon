@@ -16,6 +16,13 @@ class WorkView  extends LitElement {
           justify-content: center;
           align-items: center;
         }
+
+        .work-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       `
     ];
   }
@@ -33,8 +40,24 @@ class WorkView  extends LitElement {
         title: 'Community',
         description: 'Community is a digital product to improve neighborhood coexistence.',
         backgroundImage: '../../../assets/images/community.png',
-        icons: [],
+        icons: [
+          '../../../assets/images/angular-logo.svg',
+          '../../../assets/images/node-logo.svg',
+          '../../../assets/images/firebase-logo.svg',
+          '../../../assets/images/dialogflow-logo.svg',
+          '../../../assets/images/mongodb-logo.svg'
+        ],
         redirectUrl: 'https://ihcommunity.github.io/Community-web/',
+      },
+      {
+        title: 'Memory Game',
+        description: 'It is the classic memory game where you need to match 2 cards to keep them flipped. You win if you get to flip them all.',
+        backgroundImage: '../../../assets/images/ironman.jpg',
+        icons: [
+          '../../../assets/images/jquery-logo.svg',
+          '../../../assets/images/js-logo.svg'
+        ],
+        redirectUrl: 'https://marco238.github.io/memory-game/starter-code/memory.html',
       }
     ];
   }
@@ -54,6 +77,7 @@ class WorkView  extends LitElement {
           title="${project.title}"
           description="${project.description}"
           backgroundImage="${project.backgroundImage}"
+          .icons=${project.icons}
           redirectUrl="${project.redirectUrl}">
         </card-element>
       `;
