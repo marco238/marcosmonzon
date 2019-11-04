@@ -18,7 +18,6 @@ class MainView extends LitElement {
 
         @keyframes fadeIn {
           0% { opacity:0; }
-          66% { opacity:0; }
           100% { opacity:1; }
         }
 
@@ -74,6 +73,7 @@ class MainView extends LitElement {
           border: 1px solid var(--app-blue-color);
           color: var(--app-grey-color);
           padding: 10px 20px;
+          font-weight: 700;
           text-decoration: none;
         }
         
@@ -110,7 +110,7 @@ class MainView extends LitElement {
           position: relative;
           width: 500px;
           height: 400px;
-          animation: fadeIn 0.7s ease-in;
+          animation: fadeIn 2s ease-in;
         }
 
         img:first-child {

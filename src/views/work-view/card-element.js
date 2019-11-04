@@ -12,12 +12,16 @@ class CardElement  extends LitElement {
           position: relative;
           width: 250px;
           height: 370px;
-          background-image: url('../../../assets/images/community.png');
-          background-size: 100%;
           border-radius: 25px;
-          filter: grayscale(0.3);
           overflow: hidden;
           box-shadow: 5px 5px 20px #00000058;
+        }
+
+        .card-container {
+          background-size: 100%;
+          filter: grayscale(0.3);
+          width: 100%;
+          height: 100%;
         }
         
         img {
@@ -30,6 +34,7 @@ class CardElement  extends LitElement {
           left: 50%;
           transform: translateX(-50%);
           width: 90%;
+          max-height: 85px;
           justify-content: space-between;
           color: #737373;
         }
@@ -41,11 +46,27 @@ class CardElement  extends LitElement {
         .card-info p {
           margin: 0 0 10px 0;
           font-size: 12px;
+          height: 45px;
+          overflow: hidden;
+        }
+
+        .tech-logos {
+          display: flex;
+          position: absolute;
+          bottom: -35px;
+        }
+
+        .logo {
+          width: 25px;
+          height: 25px;
+          margin-right: 3px;
+          background-repeat: no-repeat;
+          background-position: center;
         }
 
         .card-info a {
           position: absolute;
-          bottom: -35px;
+          bottom: -37px;
           right: 0;
           padding: 8px 10px;
           border-radius: 20px;
@@ -71,22 +92,44 @@ class CardElement  extends LitElement {
   }
 
   static get properties() {
-    return {};
+    return {
+      title: {type: String},
+      description: {type: String},
+      backgroundImage: {type: String},
+      icons: {type: Array},
+      redirectUrl: {type: String}
+    };
   }
 
   constructor() {
     super();
+    this.title = 'Title';
+    this.description = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+    this.backgroundImage = '';
+    this.icons = [];
+    this.redirectUrl = '#';
   }
 
   render() {
     return html`
-      <img src="../../../assets/images/cloudyShape.svg" alt="Cloudy Shape">
-      <div class="card-info">
-        <h2>Community App</h2>
-        <p>Community is a digital product to improve neighborhood coexistence</p>
-        <a href="https://ihcommunity.github.io/Community-web/" target="_blank">CHECK IT</a>
+      <div class="card-container" style="background-image: url(${this.backgroundImage})">
+        <img src="../../../assets/images/cloudyShape.svg" alt="Cloudy Shape">
+        <div class="card-info">
+          <h2>${this.title}</h2>
+          <p>${this.description}</p>
+          <div class="tech-logos">
+            ${this._generateIcons()}
+          </div>
+          <a href="${this.redirectUrl}" target="_blank">CHECK IT</a>
+        </div>
       </div>
     `;
+  }
+
+  _generateIcons() {
+    return this.icons.map((icon) => {
+      return html`<img src="${icon}" class="logo">`;
+    });
   }
 }
 
