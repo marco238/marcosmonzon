@@ -2968,7 +2968,7 @@ usageStatistics();
 Router.NavigationTrigger = {POPSTATE, CLICK};
 
 function _templateObject2$2() {
-  var data = _taggedTemplateLiteral$2(["\n      <div class=\"presentation-text\">\n        <p>I am,</p>\n        <h1>MARCOS A. MONZ\xD3N</h1>\n        <span class=\"description\"> => Frontend Web Developer</span>\n        <div class=\"presentation-buttons\">\n          <a href=\"mailto:marcomonzip@gmail.com?Subject=Quiero%20contar%20con%20tus%20servicios\">HIRE ME</a>\n          <button>DOWNLOAD RESUME</button>\n        </div>\n      </div>\n      <div class=\"feathers\">\n        <img src=\"../../assets/images/feather-image.png\" alt=\"Feather\">\n        <img src=\"../../assets/images/feather-image.png\" alt=\"Feather\">\n        <img src=\"../../assets/images/feather-image.png\" alt=\"Feather\">\n      </div>\n    "]);
+  var data = _taggedTemplateLiteral$2(["\n      <div class=\"presentation-text\">\n        <p>I am,</p>\n        <h1>MARCOS A. MONZ\xD3N</h1>\n        <span class=\"description\"> => Frontend Web Developer</span>\n        <div class=\"presentation-buttons\">\n          <a href=\"mailto:marcomonzip@gmail.com?Subject=Quiero%20contar%20con%20tus%20servicios\">HIRE ME</a>\n          <button>DOWNLOAD RESUME</button>\n        </div>\n      </div>\n      <div class=\"feathers\">\n        <img src=\"assets/images/feather-image.png\" alt=\"Feather\">\n        <img src=\"assets/images/feather-image.png\" alt=\"Feather\">\n        <img src=\"assets/images/feather-image.png\" alt=\"Feather\">\n      </div>\n    "]);
 
   _templateObject2$2 = function _templateObject2() {
     return data;
