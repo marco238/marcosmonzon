@@ -16,19 +16,16 @@ export const initRouter = (node) => {
     },
     {
       path: '/home',
-      animate: true,
       component: 'main-view',
     },
     {
       path: '/work',
-      animate: true,
       component: 'work-view',
       action: () =>
         import('./views/work-view/work-view.js'),
     },
     {
       path: '(.*)',
-      animate: true,
       component: 'view-404',
       action: () =>
         import('./views/view-404.js'),

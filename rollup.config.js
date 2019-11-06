@@ -3,9 +3,9 @@ import common from 'rollup-plugin-commonjs';
 import copy from 'rollup-plugin-copy';
 
 export default {
-  input: 'lib/AnythingFinder.js',
+  input: 'lib/app-shell.js',
   output: {
-    file: 'dist/src/AnythingFinder.js',
+    dir: 'dist/src',
     format: 'esm'
   },
   plugins: [
@@ -15,6 +15,10 @@ export default {
       targets: [
         { 
           src: 'index.html',
+          dest: 'dist'
+        },
+        {
+          src: 'assets',
           dest: 'dist'
         }
       ]
