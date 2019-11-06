@@ -19,12 +19,6 @@ class CardElement  extends LitElement {
           animation: flipIn 0.5s ease;
         }
         
-        @keyframes flipIn {
-          0% { transform: scaleX(0) }
-          70% { transform: scaleX(0) }
-          100% { transform: scaleX(1) }
-        }
-        
         .card-container {
           background-size: cover;
           filter: grayscale(0.3);

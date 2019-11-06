@@ -23,31 +23,49 @@ class NavBar  extends LitElement {
         }
 
         nav a {
-          margin-right: 30px;
+          padding: 25px;
+          margin: -25px 30px -25px -25px;
           text-decoration: none;
           color: #ffffff;
+        }
+
+        nav a[active] {
+          color: var(--app-grey-color);
+          background-image: url('../../assets/images/blue-splash.png');
+          background-position-x: center;
+          background-position-y: 45%;
+          background-size: 90px;
+          background-repeat: no-repeat;
+          animation: fadeIn 0.5s ease;
         }
       `
     ];
   }
 
   static get properties() {
-    return {};
+    return {
+      path: { type: String }
+    };
   }
 
   constructor() {
     super();
+    this.path = location.pathname;
   }
 
   render() {
     return html`
       <nav>
-        <a href="/home">HOME</a>
-        <a href="/work">WORK</a>
-        <a href="/about">ABOUT</a>
-        <a href="/contact">CONTACT</a>
+        <a href="/home" ?active="${this.path === '/home' || this.path === '/'}" @click="${() => this._updatePath('/home')}">HOME</a>
+        <a href="/work" ?active="${this.path === '/work'}" @click="${() => this._updatePath('/work')}">WORK</a>
+        <a href="/about" ?active="${this.path === '/about'}" @click="${() => this._updatePath('/about')}">ABOUT</a>
+        <a href="/contact" ?active="${this.path === '/contact'}" @click="${() => this._updatePath('/contact')}">CONTACT</a>
       </nav>
     `;
+  }
+  
+  _updatePath(from) {
+    this.path = from;
   }
 }
 

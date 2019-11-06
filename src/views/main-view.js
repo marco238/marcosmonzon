@@ -16,16 +16,6 @@ class MainView extends LitElement {
           color: #ffffff;
         }
 
-        @keyframes fadeIn {
-          0% { opacity:0; }
-          100% { opacity:1; }
-        }
-
-        @keyframes falling {
-          from { opacity: 0; margin-top: -300px; }
-          to { opacity: 1; margin-top: -50px; }
-        }
-
         .presentation-text {
           margin-top: -50px;
           margin-right: 50px;
@@ -157,9 +147,9 @@ class MainView extends LitElement {
         </div>
       </div>
       <div class="feathers">
-        <img src="../../assets/images/feather-image.png" alt="Lion Image">
-        <img src="../../assets/images/feather-image.png" alt="Lion Image">
-        <img src="../../assets/images/feather-image.png" alt="Lion Image">
+        <img src="../../assets/images/feather-image.png" alt="Feather">
+        <img src="../../assets/images/feather-image.png" alt="Feather">
+        <img src="../../assets/images/feather-image.png" alt="Feather">
       </div>
     `;
   }
