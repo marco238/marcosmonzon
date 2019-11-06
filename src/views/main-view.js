@@ -147,9 +147,9 @@ class MainView extends LitElement {
         </div>
       </div>
       <div class="feathers">
-        <img src="../../assets/images/feather-image.png" alt="Feather">
-        <img src="../../assets/images/feather-image.png" alt="Feather">
-        <img src="../../assets/images/feather-image.png" alt="Feather">
+        <img src="assets/images/feather-image.png" alt="Feather">
+        <img src="assets/images/feather-image.png" alt="Feather">
+        <img src="assets/images/feather-image.png" alt="Feather">
       </div>
     `;
   }
