@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="351" height="525" viewBox="0 0 351 525">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rounded_Rectangle_1_copy" data-name="Rounded Rectangle 1 copy" width="351" height="525" rx="25" transform="translate(231 189)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-231 -189)" clip-path="url(#clip-path)">
+    <g id="Component_1_1" data-name="Component 1 – 1" transform="translate(157 448.521)">
+      <path id="Shape_1" data-name="Shape 1" d="M229,450s94-11,149,27,136,19,163,3,43-20,43-20V725H234S218,464,229,450Z" transform="translate(-157 -448.521)" fill="#fff" opacity="0.502"/>
+      <path id="Shape_1_copy" data-name="Shape 1 copy" d="M595.389,467.466S483.545,456.485,418.1,494.42s-161.817,18.968-193.942,2.995S173,477.449,173,477.449V742H589.44S608.477,481.443,595.389,467.466Z" transform="translate(-157 -448.521)" fill="#fff" opacity="0.502"/>
+      <path id="Shape_2" data-name="Shape 2" d="M225,469s113,35,192,17,174,14,187,15V741H157Z" transform="translate(-157 -448.521)" fill="#fff" opacity="0.502"/>
+    </g>
+  </g>
+</svg>
