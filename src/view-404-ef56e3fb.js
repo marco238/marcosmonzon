@@ -27,14 +27,6 @@ class View404 extends LitElement {
     return [SharedStyles, css(_templateObject())];
   }
 
-  static get properties() {
-    return {};
-  }
-
-  constructor() {
-    super();
-  }
-
   render() {
     return html(_templateObject2());
   }

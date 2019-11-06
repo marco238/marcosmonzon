@@ -2994,14 +2994,6 @@ class MainView extends LitElement {
     return [SharedStyles, css(_templateObject$2())];
   }
 
-  static get properties() {
-    return {};
-  }
-
-  constructor() {
-    super();
-  }
-
   render() {
     return html(_templateObject2$2());
   }
@@ -3031,7 +3023,7 @@ var initRouter = node => {
   }, {
     path: '(.*)',
     component: 'view-404',
-    action: () => import('./view-404-18de42f0.js')
+    action: () => import('./view-404-ef56e3fb.js')
   }]);
 };
 
@@ -3060,14 +3052,6 @@ function _taggedTemplateLiteral$3(strings, raw) { if (!raw) { raw = strings.slic
 class AppShell extends LitElement {
   static get styles() {
     return css(_templateObject$3());
-  }
-
-  static get properties() {
-    return {};
-  }
-
-  constructor() {
-    super();
   }
 
   render() {
