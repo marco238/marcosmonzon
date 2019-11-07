@@ -12,22 +12,30 @@ class SocialMediaBar extends LitElement {
         :host {
           width: var(--nav-bar-width);
           height: 100vh;
-          background-color: var(--app-grey-color);
-          box-shadow: 0 0 20px #13a6fb55;
           color: #ffffff50;
-          float: left;
-          margin-right: 20px;
+          position: absolute;
+          left: 0;
+          z-index: 10;
         }
 
         nav {
           --nav-padding: 22px;
+          width: calc(var(--nav-bar-width) - var(--nav-padding) * 2);
+          height: calc(100% - 2 * var(--nav-padding));
+          background-color: var(--app-grey-color);
+          box-shadow: 0 0 20px #13a6fb55;
           display: flex;
           flex-flow: column;
-          height: calc(100% - 2 * var(--nav-padding));
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
           padding: var(--nav-padding);
+          z-index: 10;
+          transition: all 0.2s ease;
+        }
+
+        .menu-button {
+          cursor: pointer;
         }
 
         .social-media-text {
@@ -42,6 +50,11 @@ class SocialMediaBar extends LitElement {
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
+        }
+
+        .opened {
+          width: 300px;
+          align-items: flex-end;
         }
       `
     ];
@@ -60,7 +73,7 @@ class SocialMediaBar extends LitElement {
   render() {
     return html`
       <nav>
-        <div class="menu-button">
+        <div class="menu-button" @click="${this._toogleBar}">
           ${menuIcon}
         </div>
         <span class="social-media-text">SOCIAL MEDIA</span>
@@ -80,6 +93,11 @@ class SocialMediaBar extends LitElement {
         </div>
       </nav>
     `;
+  }
+
+  _toogleBar() {
+    const node = this.shadowRoot.querySelector('nav');
+    node.classList.toggle('opened');
   }
 }
 
