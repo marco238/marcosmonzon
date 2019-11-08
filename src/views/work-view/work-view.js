@@ -35,7 +35,7 @@ class WorkView  extends LitElement {
         }
 
         card-element:hover {
-          box-shadow: 5px 5px 20px #0acafa1c;
+          box-shadow: none;
         }
       `
     ];
