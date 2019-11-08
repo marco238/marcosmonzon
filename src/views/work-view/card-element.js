@@ -115,7 +115,8 @@ class CardElement  extends LitElement {
 
   firstUpdated() {
     const logoNode = this.shadowRoot.querySelectorAll('.logo');
-    logoNode.forEach(node => node.addEventListener('mouseover', this._mouseOverHandler));
+    logoNode.forEach(node => node.addEventListener('mouseenter', this._mouseOverHandler));
+    logoNode.forEach(node => node.addEventListener('mouseleave', this._mouseOverHandler));
   }
 
   render() {
@@ -141,13 +142,20 @@ class CardElement  extends LitElement {
   }
 
   _mouseOverHandler(event) {
-    const detail = {
-      alt: event.target.alt,
-      top: event.screenX,
-      left: event.screenY
-    };
-    this.dispatchEvent(new CustomEvent('showBadge', detail));
-    console.log(event.screenX);
+    if(event.type === 'mouseenter') {
+      this.dispatchEvent(new CustomEvent('showBadge', {
+        composed: true,
+        detail: {
+          alt: event.target.alt,
+          top: event.clientY - 30,
+          left: event.clientX
+        }
+      }));
+    } else if(event.type === 'mouseleave') {
+      this.dispatchEvent(new CustomEvent('hideBadge', {
+        composed: true
+      }));
+    }
   }
 }
 

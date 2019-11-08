@@ -66,14 +66,10 @@ class SocialMediaBar extends LitElement {
     ];
   }
 
-  static get properties() {
-    return {
-      
-    };
-  }
-
-  constructor() {
-    super();
+  firstUpdated() {
+    const logoNode = this.shadowRoot.querySelectorAll('img');
+    logoNode.forEach(node => node.addEventListener('mouseenter', this._mouseOverHandler));
+    logoNode.forEach(node => node.addEventListener('mouseleave', this._mouseOverHandler));
   }
 
   render() {
@@ -85,16 +81,16 @@ class SocialMediaBar extends LitElement {
         <span class="social-media-text">SOCIAL MEDIA</span>
         <div class="social-links">
           <a href="https://github.com/marco238" target="_blank">
-            <img src="../../assets/images/github-logo.svg" width="34" alt="Github icon">
+            <img src="../../assets/images/github-logo.svg" width="34" alt="Github">
           </a>
           <a href="https://www.linkedin.com/in/marcomonzon/" target="_blank">
-            <img src="../../assets/images/linkedin-logo.svg" width="30" alt="Linkedin icon">
+            <img src="../../assets/images/linkedin-logo.svg" width="30" alt="Linkedin">
           </a>
           <a href="mailto:marcomonzip@gmail.com?Subject=Vengo%20desde%20tu%20web">
-            <img src="../../assets/images/email-logo.svg" width="30" alt="Email icon">
+            <img src="../../assets/images/email-logo.svg" width="30" alt="Email">
           </a>
           <a href="https://wa.me/692949758" target="_blank">
-            <img src="../../assets/images/whatsapp-logo.svg" width="30" alt="Whatsapp icon">
+            <img src="../../assets/images/whatsapp-logo.svg" width="30" alt="Whatsapp">
           </a>
         </div>
       </nav>
@@ -104,6 +100,23 @@ class SocialMediaBar extends LitElement {
   _toogleBar() {
     const node = this.shadowRoot.querySelector('nav');
     node.classList.toggle('opened');
+  }
+
+  _mouseOverHandler(event) {
+    if(event.type === 'mouseenter') {
+      this.dispatchEvent(new CustomEvent('showBadge', {
+        composed: true,
+        detail: {
+          alt: event.target.alt,
+          top: event.clientY - 30,
+          left: event.clientX
+        }
+      }));
+    } else if(event.type === 'mouseleave') {
+      this.dispatchEvent(new CustomEvent('hideBadge', {
+        composed: true
+      }));
+    }
   }
 }
 
