@@ -12,7 +12,12 @@ class AppShell extends LitElement {
       css`
         :host {
           display: block;
-          padding-left: var(--nav-bar-width);
+        }
+
+        @media screen and (min-width: 720px) {
+          :host {
+            padding-left: var(--nav-bar-width);
+          }
         }
       `
     ];

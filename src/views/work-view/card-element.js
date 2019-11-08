@@ -14,8 +14,6 @@ class CardElement  extends LitElement {
           height: 370px;
           border-radius: 25px;
           overflow: hidden;
-          box-shadow: 5px 5px 20px #00000058;
-          margin: 10px 20px;
           animation: flipIn 0.5s ease;
         }
         
@@ -115,6 +113,11 @@ class CardElement  extends LitElement {
     this.redirectUrl = '#';
   }
 
+  firstUpdated() {
+    const logoNode = this.shadowRoot.querySelectorAll('.logo');
+    logoNode.forEach(node => node.addEventListener('mouseover', this._mouseOverHandler));
+  }
+
   render() {
     return html`
       <div class="card-container" style="background-image: url(${this.backgroundImage})">
@@ -133,8 +136,18 @@ class CardElement  extends LitElement {
 
   _generateIcons() {
     return this.icons.map((icon) => {
-      return html`<img src="${icon}" class="logo">`;
+      return html`<img src="${icon.url}" class="logo" alt="${icon.alt}">`;
     });
+  }
+
+  _mouseOverHandler(event) {
+    const detail = {
+      alt: event.target.alt,
+      top: event.screenX,
+      left: event.screenY
+    };
+    this.dispatchEvent(new CustomEvent('showBadge', detail));
+    console.log(event.screenX);
   }
 }
 

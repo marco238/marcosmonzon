@@ -56,6 +56,12 @@ class SocialMediaBar extends LitElement {
           width: 300px;
           align-items: flex-end;
         }
+
+        @media screen and (max-width: 720px) {
+          :host {
+            display: none;
+          }
+        }
       `
     ];
   }
