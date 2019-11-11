@@ -25,6 +25,12 @@ export const initRouter = (node) => {
         import('./views/work-view/work-view.js'),
     },
     {
+      path: '/about',
+      component: 'about-view',
+      action: () =>
+        import('./views/about-view.js'),
+    },
+    {
       path: '(.*)',
       component: 'view-404',
       action: () =>

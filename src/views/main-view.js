@@ -19,6 +19,7 @@ class MainView extends LitElement {
         .presentation-text {
           margin-top: -50px;
           margin-right: 50px;
+          margin-left: 50px;
           animation: falling 0.5s ease;
         }
 

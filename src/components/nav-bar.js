@@ -16,6 +16,7 @@ class NavBar  extends LitElement {
           justify-content: flex-end;
           align-items: center;
           height: 70px;
+          z-index: 999;
         }
 
         nav {
