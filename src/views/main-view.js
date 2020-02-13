@@ -129,21 +129,28 @@ class MainView extends LitElement {
   }
 
   static get properties() {
-    return {};
+    return {
+      name: {type: String},
+      job: {type: String},
+      mail: {type: String}
+    };
   }
 
   constructor() {
     super();
+    this.name = 'MARCOS A. MONZÓN';
+    this.job = 'Frontend Web Developer';
+    this.mail = 'marcomonzip@gmail.com';
   }
 
   render() {
     return html`
       <div class="presentation-text">
         <p>I am,</p>
-        <h1>MARCOS A. MONZÓN</h1>
-        <span class="description"> => Frontend Web Developer</span>
+        <h1>${this.name}</h1>
+        <span class="description"> => ${this.job}</span>
         <div class="presentation-buttons">
-          <a href="mailto:marcomonzip@gmail.com?Subject=Quiero%20contar%20con%20tus%20servicios">HIRE ME</a>
+          <a href="mailto:${this.mail}?Subject=Quiero%20contar%20con%20tus%20servicios">HIRE ME</a>
           <button>DOWNLOAD RESUME</button>
         </div>
       </div>

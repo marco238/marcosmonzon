@@ -3,7 +3,6 @@ import { LitElement, html, css } from 'lit-element';
 import { SharedStyles } from '../../assets/sharedStyles';
 
 class NavBar  extends LitElement {
-
   static get styles() {
     return [
       SharedStyles,

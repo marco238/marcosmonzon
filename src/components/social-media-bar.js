@@ -4,7 +4,6 @@ import { menuIcon } from '../../assets/icons';
 import { SharedStyles } from '../../assets/sharedStyles';
 
 class SocialMediaBar extends LitElement {
-
   static get styles() {
     return [
       SharedStyles,
