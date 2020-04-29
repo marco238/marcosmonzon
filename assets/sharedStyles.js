@@ -23,9 +23,18 @@ export const SharedStyles = css`
     to { opacity: 1; margin-top: -50px; }
   }
 
+  @keyframes fromRight {
+    from { opacity: 0; margin-right: -300px; }
+    to { opacity: 1; margin-right: 0; }
+  }
+
+  @keyframes fromLeft {
+    from { opacity: 0; margin-left: -300px; }
+    to { opacity: 1; margin-left: 0; }
+  }
+
   @keyframes flipIn {
     0% { transform: scaleX(0) }
-    70% { transform: scaleX(0) }
     100% { transform: scaleX(1) }
   }
 `;
