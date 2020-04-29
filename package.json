@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "index.js",
   "module": "index.js",
-  "homepage": "https://marco238.github.io/home/",
+  "homepage": "https://marco238.github.io/marcomonzon/home",
   "scripts": {
     "dev": "es-dev-server",
     "test": "karma start --coverage",

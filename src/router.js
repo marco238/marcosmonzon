@@ -8,6 +8,7 @@ import './views/main-view';
  */
 export const initRouter = (node) => {
   const router = new Router(node);
+  router.baseUrl = '/marcomonzon'
 
   router.setRoutes([
     {
