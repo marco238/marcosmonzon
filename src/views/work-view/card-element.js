@@ -122,7 +122,7 @@ class CardElement  extends LitElement {
   render() {
     return html`
       <div class="card-container" style="background-image: url(${this.backgroundImage})">
-        <img src="../../../assets/images/cloudyShape.svg" alt="Cloudy Shape">
+        <img src="https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588156329/marcomonzon/cloudyShape.svg" alt="Cloudy Shape">
         <div class="card-info">
           <h2>${this.title}</h2>
           <p>${this.description}</p>

@@ -31,7 +31,7 @@ class NavBar  extends LitElement {
 
         nav a[active] {
           color: var(--app-grey-color);
-          background-image: url('../../assets/images/blue-splash.png');
+          background-image: url('https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588156329/marcomonzon/blue-splash.png');
           background-position-x: center;
           background-position-y: 45%;
           background-size: 90px;

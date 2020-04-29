@@ -132,7 +132,8 @@ class MainView extends LitElement {
     return {
       name: {type: String},
       job: {type: String},
-      mail: {type: String}
+      mail: {type: String},
+      assetsBasePath: {type: String}
     };
   }
 
@@ -141,6 +142,7 @@ class MainView extends LitElement {
     this.name = 'MARCOS A. MONZÓN';
     this.job = 'Frontend Web Developer';
     this.mail = 'marcomonzip@gmail.com';
+    this.assetsBasePath = 'https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588156329/marcomonzon';
   }
 
   render() {
@@ -157,9 +159,9 @@ class MainView extends LitElement {
         </div>
       </div>
       <div class="feathers">
-        <img src="assets/images/feather-image.png" alt="Feather">
-        <img src="assets/images/feather-image.png" alt="Feather">
-        <img src="assets/images/feather-image.png" alt="Feather">
+        <img src="${this.assetsBasePath}/feather-image.png" alt="Feather">
+        <img src="${this.assetsBasePath}/feather-image.png" alt="Feather">
+        <img src="${this.assetsBasePath}/feather-image.png" alt="Feather">
       </div>
     `;
   }

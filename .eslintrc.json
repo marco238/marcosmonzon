@@ -9,6 +9,7 @@
     "fetch": false,
     "window": false,
     "document": false,
-    "customElements": false
+    "customElements": false,
+    "location": false
   }
 }
