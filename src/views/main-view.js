@@ -42,7 +42,7 @@ class MainView extends LitElement {
           width: 300px;
         }
 
-        .presentation-buttons button, .presentation-buttons a {
+        .presentation-buttons button, .presentation-buttons #hire-me {
           position: relative;
           font-size: 14px;
           margin: 20px 20px 0 0;
@@ -51,7 +51,7 @@ class MainView extends LitElement {
           border-radius: 0 0 10px 0;
         }
 
-        .presentation-buttons button:hover, .presentation-buttons a:hover {
+        .presentation-buttons button:hover, .presentation-buttons #hire-me:hover {
           box-shadow: 0 0 10px var(--app-blue-color);
         }
         
@@ -59,7 +59,7 @@ class MainView extends LitElement {
           outline: none;
         }
         
-        .presentation-buttons a {
+        .presentation-buttons #hire-me {
           background-color: var(--app-blue-color);
           border: 1px solid var(--app-blue-color);
           color: var(--app-grey-color);
@@ -75,7 +75,7 @@ class MainView extends LitElement {
           padding: 10px 15px;
         }
         
-        .presentation-buttons a span {
+        .presentation-buttons #hire-me span {
           width: 10px;
           height: 10px;
           position: absolute;
@@ -150,8 +150,10 @@ class MainView extends LitElement {
         <h1>${this.name}</h1>
         <span class="description"> => ${this.job}</span>
         <div class="presentation-buttons">
-          <a href="mailto:${this.mail}?Subject=Quiero%20contar%20con%20tus%20servicios">HIRE ME</a>
-          <button>DOWNLOAD RESUME</button>
+          <a id="hire-me" href="mailto:${this.mail}?Subject=Quiero%20contar%20con%20tus%20servicios">HIRE ME</a>
+          <a id="download-resume" @click="${this._downloadResume}">
+            <button>DOWNLOAD RESUME</button>
+          </a>
         </div>
       </div>
       <div class="feathers">
@@ -161,7 +163,20 @@ class MainView extends LitElement {
       </div>
     `;
   }
+
+  _downloadResume() {
+    fetch('https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588150941/M.pdf')
+      .then(res => {
+        return res.blob();
+      })
+      .then(blob => {
+        let url = window.URL.createObjectURL(blob);
+        let a = document.createElement('a');
+        a.href = url;
+        a.download = "Marcos_Monzon.pdf";
+        a.click();    
+      })
+  }
 }
 
-// eslint-disable-next-line no-undef
 customElements.define('main-view', MainView);

@@ -4,5 +4,11 @@
   "rules": {
     "lit/no-legacy-template-syntax": "warn"
   },
-  "plugins": ["lit"]
+  "plugins": ["lit"],
+  "globals": { 
+    "fetch": false,
+    "window": false,
+    "document": false,
+    "customElements": false
+  }
 }
