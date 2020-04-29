@@ -284,7 +284,7 @@
         <img src="${this.assetsBasePath}/feather-image.png" alt="Feather">
         <img src="${this.assetsBasePath}/feather-image.png" alt="Feather">
       </div>
-    `}_downloadResume(){fetch("https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588150941/M.pdf").then(e=>e.blob()).then(e=>{let t=window.URL.createObjectURL(e),n=document.createElement("a");n.href=t,n.download="Marcos_Monzon.pdf",n.click()})}}customElements.define("main-view",pe);class ue extends r.a{static get styles(){return[i.a,r.b`
+    `}_downloadResume(){fetch("https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588150941/M.pdf").then(e=>e.blob()).then(e=>{let t=window.URL.createObjectURL(e),n=document.createElement("a");n.href=t,n.download="Marcos_Monzon.pdf",n.click()})}}customElements.define("main-view",pe),n.e(3).then(n.bind(null,6)),n.e(1).then(n.bind(null,4)),n.e(2).then(n.bind(null,5));class ue extends r.a{static get styles(){return[i.a,r.b`
         :host {
           display: block;
         }
@@ -305,7 +305,7 @@
             padding-left: var(--nav-bar-width);
           }
         }
-      `]}firstUpdated(){(e=>{new se(e,{baseUrl:"/marcosmonzon/"}).setRoutes([{path:"/",redirect:"/home"},{path:"/home",component:"main-view"},{path:"/work",component:"work-view",action:()=>n.e(3).then(n.bind(null,6))},{path:"/about",component:"about-view",action:()=>n.e(1).then(n.bind(null,4))},{path:"(.*)",component:"view-404",action:()=>n.e(2).then(n.bind(null,5))}])})(this.shadowRoot.querySelector("main"))}connectedCallback(){super.connectedCallback(),this.addEventListener("showBadge",this._openBadge),this.addEventListener("hideBadge",this._hideBadge)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("showBadge",this._openBadge),this.removeEventListener("hideBadge",this._hideBadge)}render(){return r.c`
+      `]}firstUpdated(){(e=>{new se(e,{baseUrl:"/marcosmonzon/"}).setRoutes([{path:"/",redirect:"/home"},{path:"/home",component:"main-view"},{path:"/work",component:"work-view"},{path:"/about",component:"about-view"},{path:"(.*)",component:"view-404"}])})(this.shadowRoot.querySelector("main"))}connectedCallback(){super.connectedCallback(),this.addEventListener("showBadge",this._openBadge),this.addEventListener("hideBadge",this._hideBadge)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("showBadge",this._openBadge),this.removeEventListener("hideBadge",this._hideBadge)}render(){return r.c`
       <social-media-bar></social-media-bar>
       <nav-bar></nav-bar>
       <main></main>
