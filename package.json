@@ -1,12 +1,12 @@
 {
-  "name": "marcomonzon",
+  "name": "marcosmonzon",
   "version": "0.0.0",
   "description": "My own website made with LitElement",
   "author": "Marco Monzón",
   "license": "MIT",
   "main": "index.js",
   "module": "index.js",
-  "homepage": "https://marco238.github.io/marcomonzon/",
+  "homepage": "https://marco238.github.io/marcosmonzon/",
   "scripts": {
     "dev": "es-dev-server",
     "test": "karma start --coverage",
