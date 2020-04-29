@@ -305,7 +305,7 @@
             padding-left: var(--nav-bar-width);
           }
         }
-      `]}firstUpdated(){(e=>{const t=new se(e);t.baseUrl="/marcomonzon",t.setRoutes([{path:"/",redirect:"/home"},{path:"/home",component:"main-view"},{path:"/work",component:"work-view",action:()=>n.e(3).then(n.bind(null,6))},{path:"/about",component:"about-view",action:()=>n.e(1).then(n.bind(null,4))},{path:"(.*)",component:"view-404",action:()=>n.e(2).then(n.bind(null,5))}])})(this.shadowRoot.querySelector("main"))}connectedCallback(){super.connectedCallback(),this.addEventListener("showBadge",this._openBadge),this.addEventListener("hideBadge",this._hideBadge)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("showBadge",this._openBadge),this.removeEventListener("hideBadge",this._hideBadge)}render(){return r.c`
+      `]}firstUpdated(){(e=>{const t=new se(e);t.baseUrl="https://marco238.github.io/marcosmonzon",t.setRoutes([{path:"/",redirect:"/home"},{path:"/home",component:"main-view"},{path:"/work",component:"work-view",action:()=>n.e(3).then(n.bind(null,6))},{path:"/about",component:"about-view",action:()=>n.e(1).then(n.bind(null,4))},{path:"(.*)",component:"view-404",action:()=>n.e(2).then(n.bind(null,5))}])})(this.shadowRoot.querySelector("main"))}connectedCallback(){super.connectedCallback(),this.addEventListener("showBadge",this._openBadge),this.addEventListener("hideBadge",this._hideBadge)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("showBadge",this._openBadge),this.removeEventListener("hideBadge",this._hideBadge)}render(){return r.c`
       <social-media-bar></social-media-bar>
       <nav-bar></nav-bar>
       <main></main>
