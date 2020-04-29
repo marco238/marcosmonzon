@@ -10,6 +10,9 @@
     "window": false,
     "document": false,
     "customElements": false,
-    "location": false
+    "location": false,
+    "require": false,
+    "module": false,
+    "__dirname": false
   }
 }
