@@ -67,7 +67,7 @@
           background-repeat: no-repeat;
           animation: fadeIn 0.5s ease;
         }
-      `]}static get properties(){return{path:{type:String}}}constructor(){super(),this.path=location.pathname}render(){return r.c`
+      `]}static get properties(){return{path:{type:String}}}constructor(){super(),this.path="/marcosmonzon"+location.pathname}render(){return r.c`
       <nav>
         <a href="/marcosmonzon/home" ?active="${"/marcosmonzon/home"===this.path||"/"===this.path}" @click="${()=>this._updatePath("/marcosmonzon/home")}">HOME</a>
         <a href="/marcosmonzon/work" ?active="${"/marcosmonzon/work"===this.path}" @click="${()=>this._updatePath("/marcosmonzon/work")}">WORK</a>
@@ -305,7 +305,7 @@
             padding-left: var(--nav-bar-width);
           }
         }
-      `]}firstUpdated(){(e=>{new se(e,{baseUrl:"/marcosmonzon/"}).setRoutes([{path:"/",redirect:"/home"},{path:"/home",component:"main-view",action:()=>n.e(3).then(n.bind(null,6))},{path:"/work",component:"work-view",action:()=>n.e(3).then(n.bind(null,6))},{path:"/about",component:"about-view",action:()=>n.e(0).then(n.bind(null,4))},{path:"(.*)",component:"view-404",action:()=>n.e(2).then(n.bind(null,5))}])})(this.shadowRoot.querySelector("main"))}connectedCallback(){super.connectedCallback(),this.addEventListener("showBadge",this._openBadge),this.addEventListener("hideBadge",this._hideBadge)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("showBadge",this._openBadge),this.removeEventListener("hideBadge",this._hideBadge)}render(){return r.c`
+      `]}firstUpdated(){(e=>{new se(e,{baseUrl:"/marcosmonzon/"}).setRoutes([{path:"/",redirect:"/home"},{path:"/home",component:"main-view"},{path:"/work",component:"work-view",action:()=>n.e(3).then(n.bind(null,6))},{path:"/about",component:"about-view",action:()=>n.e(0).then(n.bind(null,4))},{path:"(.*)",component:"view-404",action:()=>n.e(2).then(n.bind(null,5))}])})(this.shadowRoot.querySelector("main"))}connectedCallback(){super.connectedCallback(),this.addEventListener("showBadge",this._openBadge),this.addEventListener("hideBadge",this._hideBadge)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("showBadge",this._openBadge),this.removeEventListener("hideBadge",this._hideBadge)}render(){return r.c`
       <social-media-bar></social-media-bar>
       <nav-bar></nav-bar>
       <main></main>
