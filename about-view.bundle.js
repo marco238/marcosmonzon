@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{4:function(e,t,i){"use strict";i.r(t);var n=i(0),o=i(1);class s extends n.a{static get styles(){return[o.a,n.b`
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{4:function(e,t,i){"use strict";i.r(t);var n=i(0),o=i(1);class r extends n.a{static get styles(){return[o.a,n.b`
         :host {
           height: 100vh;
           display: flex;
@@ -22,9 +22,9 @@
           letter-spacing: 1px;
           animation: fromRight 0.5s ease;
         }
-      `]}render(){return n.c`
+      `]}static get properties(){return{title:{type:String},description:{type:String}}}constructor(){super(),this.title="About me",this.description="\n      Guess what... I love programming 😄, specially\n      web development. Currently, I dedicate myself to \"Frontend\" with\n      Javascript and it's definitely my thing. I've been working with\n      frameworks like React, Angular, Vue, LitElement & Polymer; also\n      with all those other tools involved in the web dev experience 🙄.\n      I love studying new tech and if I had enough time I would learn\n      them all.\n    "}render(){return n.c`
       <div>
-        <h2>About me</h2>
-        <p>&nbsp;&nbsp;&nbsp;I studied Automatic Control Engineering, since then I love programming, specifically web development. Currently, I dedicate myself to "Frontend" with Javascript and it's definitely my thing. I've been working with technologies like React, Angular, Vue, LitElement & Polymer 3; in addition to many others a little more specific. I love studying new tech and if I had time I would master them all.</p>
+        <h2>${this.title}</h2>
+        <p>${this.description}</p>
       </div>
-    `}}customElements.define("about-view",s)}}]);
+    `}}customElements.define("about-view",r)}}]);
