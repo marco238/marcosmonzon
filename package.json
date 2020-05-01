@@ -6,13 +6,13 @@
   "license": "MIT",
   "main": "index.js",
   "module": "index.js",
-  "homepage": "https://marco238.github.io/marcosmonzon/",
+  "homepage": "https://marco238.github.io/marcosmonzon/home",
   "scripts": {
     "dev": "webpack-dev-server --env.mode development --open",
     "test": "karma start --coverage",
     "lint": "eslint \"src/**/*.js\"",
     "build": "webpack --env.mode production",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@vaadin/router": "^1.5.1",

@@ -8,7 +8,6 @@ import './views/main-view';
  */
 export const initRouter = (node) => {
   const router = new Router(node);
-  router.baseUrl = '/marcomonzon'
 
   router.setRoutes([
     {
@@ -23,19 +22,19 @@ export const initRouter = (node) => {
       path: '/work',
       component: 'work-view',
       action: () =>
-        import('./views/work-view/work-view.js'),
+        import(/* webpackChunkName: "work-view" */ './views/work-view/work-view.js'),
     },
     {
       path: '/about',
       component: 'about-view',
       action: () =>
-        import('./views/about-view.js'),
+        import(/* webpackChunkName: "about-view" */ './views/about-view.js'),
     },
     {
       path: '(.*)',
       component: 'view-404',
       action: () =>
-        import('./views/view-404.js'),
+        import(/* webpackChunkName: "view-404" */ './views/view-404.js'),
     },
   ]);
 };
