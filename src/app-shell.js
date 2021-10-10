@@ -1,9 +1,9 @@
-import { html, css, LitElement } from 'lit-element';
+import { html, css, LitElement } from "lit-element";
 
-import './components/nav-bar';
-import './components/social-media-bar';
-import { initRouter } from './router';
-import { SharedStyles } from '../assets/sharedStyles';
+import "./components/nav-bar";
+import "./components/social-media-bar";
+import { initRouter } from "./router";
+import { SharedStyles } from "../assets/sharedStyles";
 
 class AppShell extends LitElement {
   static get styles() {
@@ -18,7 +18,11 @@ class AppShell extends LitElement {
           position: absolute;
           font-size: 12px;
           color: #fff;
-          background: linear-gradient(45deg, var(--app-grey-color), var(--app-blue-color));
+          background: linear-gradient(
+            45deg,
+            var(--app-grey-color),
+            var(--app-blue-color)
+          );
           border-radius: 2px;
           padding: 2px 5px;
           z-index: 20;
@@ -30,25 +34,25 @@ class AppShell extends LitElement {
             padding-left: var(--nav-bar-width);
           }
         }
-      `
+      `,
     ];
   }
 
   firstUpdated() {
-    const node = this.shadowRoot.querySelector('main');
+    const node = this.shadowRoot.querySelector("main");
     initRouter(node);
   }
 
   connectedCallback() {
     super.connectedCallback();
-    this.addEventListener('showBadge', this._openBadge);
-    this.addEventListener('hideBadge', this._hideBadge);
+    this.addEventListener("showBadge", this._openBadge);
+    this.addEventListener("hideBadge", this._hideBadge);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    this.removeEventListener('showBadge', this._openBadge);
-    this.removeEventListener('hideBadge', this._hideBadge);
+    this.removeEventListener("showBadge", this._openBadge);
+    this.removeEventListener("hideBadge", this._hideBadge);
   }
 
   render() {
@@ -61,21 +65,21 @@ class AppShell extends LitElement {
   }
 
   _openBadge(e) {
-    let badge = this.shadowRoot.querySelector('.badge');
+    let badge = this.shadowRoot.querySelector(".badge");
     badge.textContent = e.detail.alt;
-    badge.style.display = 'block';
+    badge.style.display = "block";
     badge.style.top = `${e.detail.top}px`;
     badge.style.left = `${e.detail.left}px`;
   }
 
   _hideBadge() {
-    let badge = this.shadowRoot.querySelector('.badge');
-    badge.textContent = '';
-    badge.style.display = 'none';
+    let badge = this.shadowRoot.querySelector(".badge");
+    badge.textContent = "";
+    badge.style.display = "none";
     badge.style.top = 0;
     badge.style.left = 0;
   }
 }
 
 // eslint-disable-next-line no-undef
-customElements.define('app-shell', AppShell);
+customElements.define("app-shell", AppShell);
