@@ -1,8 +1,8 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from "lit-element";
 
-import { SharedStyles } from '../../assets/sharedStyles';
+import { SharedStyles } from "../../assets/sharedStyles";
 
-class NavBar  extends LitElement {
+class NavBar extends LitElement {
   static get styles() {
     return [
       SharedStyles,
@@ -31,20 +31,20 @@ class NavBar  extends LitElement {
 
         nav a[active] {
           color: var(--app-grey-color);
-          background-image: url('https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588156329/marcomonzon/blue-splash.png');
+          background-image: url("https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588156329/marcomonzon/blue-splash.png");
           background-position-x: center;
           background-position-y: 45%;
           background-size: 90px;
           background-repeat: no-repeat;
           animation: fadeIn 0.5s ease;
         }
-      `
+      `,
     ];
   }
 
   static get properties() {
     return {
-      path: { type: String }
+      path: { type: String },
     };
   }
 
@@ -56,18 +56,38 @@ class NavBar  extends LitElement {
   render() {
     return html`
       <nav>
-        <a href="/home" ?active="${this.path === '/home' || this.path === '/'}" @click="${() => this._updatePath('/home')}">HOME</a>
-        <a href="/work" ?active="${this.path === '/work'}" @click="${() => this._updatePath('/work')}">WORK</a>
-        <a href="/about" ?active="${this.path === '/about'}" @click="${() => this._updatePath('/about')}">ABOUT</a>
-        <a href="/contact" ?active="${this.path === '/contact'}" @click="${() => this._updatePath('/contact')}">CONTACT</a>
+        <a
+          href="/"
+          ?active="${this.path === "/" || this.path === "/"}"
+          @click="${() => this._updatePath("/")}"
+          >HOME</a
+        >
+        <a
+          href="/work"
+          ?active="${this.path === "/work"}"
+          @click="${() => this._updatePath("/work")}"
+          >WORK</a
+        >
+        <a
+          href="/about"
+          ?active="${this.path === "/about"}"
+          @click="${() => this._updatePath("/about")}"
+          >ABOUT</a
+        >
+        <a
+          href="/contact"
+          ?active="${this.path === "/contact"}"
+          @click="${() => this._updatePath("/contact")}"
+          >CONTACT</a
+        >
       </nav>
     `;
   }
-  
+
   _updatePath(from) {
     this.path = from;
   }
 }
 
 // eslint-disable-next-line no-undef
-customElements.define('nav-bar', NavBar);
+customElements.define("nav-bar", NavBar);

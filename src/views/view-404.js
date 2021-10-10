@@ -1,9 +1,8 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from "lit-element";
 
-import { SharedStyles } from '../../assets/sharedStyles';
+import { SharedStyles } from "../../assets/sharedStyles";
 
-class View404  extends LitElement {
-
+class View404 extends LitElement {
   static get styles() {
     return [
       SharedStyles,
@@ -15,7 +14,7 @@ class View404  extends LitElement {
           height: 100vh;
           color: #ffffff;
         }
-      `
+      `,
     ];
   }
 
@@ -29,10 +28,10 @@ class View404  extends LitElement {
 
   render() {
     return html`
-      <h2>Work in progress!</h2>
+      <h2>404 - Not found :(</h2>
     `;
   }
 }
 
 // eslint-disable-next-line no-undef
-customElements.define('view-404', View404);
+customElements.define("view-404", View404);
