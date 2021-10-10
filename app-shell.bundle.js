@@ -70,25 +70,25 @@
       `]}static get properties(){return{path:{type:String}}}constructor(){super(),this.path=location.pathname}render(){return r.c`
       <nav>
         <a
-          href="/"
+          href="/marcosmonzon/"
           ?active="${"/"===this.path||"/"===this.path}"
           @click="${()=>this._updatePath("/")}"
           >HOME</a
         >
         <a
-          href="/work"
+          href="/marcosmonzon/work"
           ?active="${"/work"===this.path}"
           @click="${()=>this._updatePath("/work")}"
           >WORK</a
         >
         <a
-          href="/about"
+          href="/marcosmonzon/about"
           ?active="${"/about"===this.path}"
           @click="${()=>this._updatePath("/about")}"
           >ABOUT</a
         >
         <a
-          href="/contact"
+          href="/marcosmonzon/contact"
           ?active="${"/contact"===this.path}"
           @click="${()=>this._updatePath("/contact")}"
           >CONTACT</a
