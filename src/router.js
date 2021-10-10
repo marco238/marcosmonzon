@@ -7,15 +7,15 @@ import "./views/main-view";
  * @param {object} HTML node to host components
  */
 export const initRouter = (node) => {
-  const router = new Router(node);
+  const router = new Router(node, { baseUrl: "" });
 
   router.setRoutes([
     {
-      path: "/",
+      path: "/marcosmonzon/",
       component: "main-view",
     },
     {
-      path: "/work",
+      path: "/marcosmonzon/work",
       component: "work-view",
       action: () =>
         import(
@@ -23,7 +23,7 @@ export const initRouter = (node) => {
         ),
     },
     {
-      path: "/about",
+      path: "/marcosmonzon/about",
       component: "about-view",
       action: () =>
         import(/* webpackChunkName: "about-view" */ "./views/about-view.js"),
