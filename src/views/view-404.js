@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit-element";
 
 import { SharedStyles } from "../../assets/sharedStyles";
+import { notFoundIcon } from "../../assets/icons";
 
 class View404 extends LitElement {
   static get styles() {
@@ -13,6 +14,11 @@ class View404 extends LitElement {
           align-items: center;
           height: 100vh;
           color: #ffffff;
+        }
+
+        .not-found-container {
+          width: 700px;
+          animation: fadeIn 0.5s ease-in;
         }
       `,
     ];
@@ -28,7 +34,9 @@ class View404 extends LitElement {
 
   render() {
     return html`
-      <h2>404 - Not found :(</h2>
+      <div class="not-found-container">
+        ${notFoundIcon}
+      </div>
     `;
   }
 }
