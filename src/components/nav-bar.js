@@ -57,25 +57,25 @@ class NavBar extends LitElement {
     return html`
       <nav>
         <a
-          href="/marcosmonzon/"
+          href="/"
           ?active="${this.path === "/" || this.path === "/"}"
           @click="${() => this._updatePath("/")}"
           >HOME</a
         >
         <a
-          href="/marcosmonzon/work"
+          href="/work"
           ?active="${this.path === "/work"}"
           @click="${() => this._updatePath("/work")}"
           >WORK</a
         >
         <a
-          href="/marcosmonzon/about"
+          href="/about"
           ?active="${this.path === "/about"}"
           @click="${() => this._updatePath("/about")}"
           >ABOUT</a
         >
         <a
-          href="/marcosmonzon/contact"
+          href="/contact"
           ?active="${this.path === "/contact"}"
           @click="${() => this._updatePath("/contact")}"
           >CONTACT</a

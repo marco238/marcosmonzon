@@ -11,11 +11,11 @@ export const initRouter = (node) => {
 
   router.setRoutes([
     {
-      path: "/marcosmonzon/",
+      path: "/",
       component: "main-view",
     },
     {
-      path: "/marcosmonzon/work",
+      path: "/work",
       component: "work-view",
       action: () =>
         import(
@@ -23,7 +23,7 @@ export const initRouter = (node) => {
         ),
     },
     {
-      path: "/marcosmonzon/about",
+      path: "/about",
       component: "about-view",
       action: () =>
         import(/* webpackChunkName: "about-view" */ "./views/about-view.js"),
