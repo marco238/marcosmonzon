@@ -60,7 +60,7 @@
 
         nav a[active] {
           color: var(--app-grey-color);
-          background-image: url('https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588156329/marcomonzon/blue-splash.png');
+          background-image: url("https://res.cloudinary.com/dlmrvaeyh/image/upload/v1588156329/marcomonzon/blue-splash.png");
           background-position-x: center;
           background-position-y: 45%;
           background-size: 90px;
@@ -69,10 +69,30 @@
         }
       `]}static get properties(){return{path:{type:String}}}constructor(){super(),this.path=location.pathname}render(){return r.c`
       <nav>
-        <a href="/home" ?active="${"/home"===this.path||"/"===this.path}" @click="${()=>this._updatePath("/home")}">HOME</a>
-        <a href="/work" ?active="${"/work"===this.path}" @click="${()=>this._updatePath("/work")}">WORK</a>
-        <a href="/about" ?active="${"/about"===this.path}" @click="${()=>this._updatePath("/about")}">ABOUT</a>
-        <a href="/contact" ?active="${"/contact"===this.path}" @click="${()=>this._updatePath("/contact")}">CONTACT</a>
+        <a
+          href="/"
+          ?active="${"/"===this.path||"/"===this.path}"
+          @click="${()=>this._updatePath("/")}"
+          >HOME</a
+        >
+        <a
+          href="/work"
+          ?active="${"/work"===this.path}"
+          @click="${()=>this._updatePath("/work")}"
+          >WORK</a
+        >
+        <a
+          href="/about"
+          ?active="${"/about"===this.path}"
+          @click="${()=>this._updatePath("/about")}"
+          >ABOUT</a
+        >
+        <a
+          href="/contact"
+          ?active="${"/contact"===this.path}"
+          @click="${()=>this._updatePath("/contact")}"
+          >CONTACT</a
+        >
       </nav>
     `}_updatePath(e){this.path=e}}customElements.define("nav-bar",o);const s=r.c`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="20" viewBox="0 0 44 31"><defs><linearGradient id="linear-gradient" x1="28.199" y1="33.742" x2="14.028" y2="-1.097" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#71d2ec"/><stop offset="1" stop-color="#0ac8fa"/></linearGradient></defs><g id="menu" transform="translate(-31 -34)"><g id="menu-2" data-name="menu"><rect id="Rectangle_4" data-name="Rectangle 4" width="37" height="3" transform="translate(31 34)" fill="#fff"/><rect id="Rectangle_4_copy_3" data-name="Rectangle 4 copy 3" width="3" height="3" transform="translate(72 34)" fill="#fff"/><rect id="Rectangle_4_copy_4" data-name="Rectangle 4 copy 4" width="3" height="3" transform="translate(31 48)" fill="#fff"/><rect id="Rectangle_4_copy" data-name="Rectangle 4 copy" width="37" height="3" transform="translate(38 48)" fill="#fff"/><rect id="Rectangle_4_copy_2" data-name="Rectangle 4 copy 2" width="17" height="3" transform="translate(31 62)" fill="#fff"/><rect id="Rectangle_4_copy_6" data-name="Rectangle 4 copy 6" width="16" height="3" transform="translate(59 62)" fill="#fff"/><rect id="Rectangle_4_copy_5" data-name="Rectangle 4 copy 5" width="3" height="3" transform="translate(52 62)" fill="#fff"/></g><path id="Gradient_Overlay" data-name="Gradient Overlay" d="M59,65V62H75v3Zm-7,0V62h3v3ZM31,65V62H48v3Zm7-14V48H75v3Zm-7,0V48h3v3ZM72,37V34h3v3ZM31,37V34H68v3Z" fill="url(#linear-gradient)"/></g></svg>`;r.c`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="26" viewBox="0 0 67 26"><defs><pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 67 26"><image width="67" height="26" xlink:href="data:image/png;base64,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"/></pattern></defs><path id="Layer_2" data-name="Layer 2" d="M0,0H67V26H0Z" fill="url(#pattern)"/></svg>`;class a extends r.a{static get styles(){return[i.a,r.b`
         :host {
@@ -315,7 +335,7 @@
             padding-left: var(--nav-bar-width);
           }
         }
-      `]}firstUpdated(){(e=>{new se(e).setRoutes([{path:"/",redirect:"/home"},{path:"/home",component:"main-view"},{path:"/work",component:"work-view",action:()=>n.e(3).then(n.bind(null,6))},{path:"/about",component:"about-view",action:()=>n.e(0).then(n.bind(null,4))},{path:"(.*)",component:"view-404",action:()=>n.e(2).then(n.bind(null,5))}])})(this.shadowRoot.querySelector("main"))}connectedCallback(){super.connectedCallback(),this.addEventListener("showBadge",this._openBadge),this.addEventListener("hideBadge",this._hideBadge)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("showBadge",this._openBadge),this.removeEventListener("hideBadge",this._hideBadge)}render(){return r.c`
+      `]}firstUpdated(){(e=>{new se(e).setRoutes([{path:"/",component:"main-view"},{path:"/work",component:"work-view",action:()=>n.e(3).then(n.bind(null,6))},{path:"/about",component:"about-view",action:()=>n.e(0).then(n.bind(null,4))},{path:"(.*)",component:"view-404",action:()=>n.e(2).then(n.bind(null,5))}])})(this.shadowRoot.querySelector("main"))}connectedCallback(){super.connectedCallback(),this.addEventListener("showBadge",this._openBadge),this.addEventListener("hideBadge",this._hideBadge)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("showBadge",this._openBadge),this.removeEventListener("hideBadge",this._hideBadge)}render(){return r.c`
       <social-media-bar></social-media-bar>
       <nav-bar></nav-bar>
       <main></main>
