@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{5:function(e,t,s){"use strict";s.r(t);var n=s(0),r=s(1);class i extends n.a{static get styles(){return[r.a,n.b`
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{6:function(t,e,n){"use strict";n.r(e);var s=n(0),r=n(1),i=n(2);class o extends s.a{static get styles(){return[r.a,s.b`
         :host {
           display: flex;
           justify-content: center;
@@ -7,12 +7,11 @@
           color: #ffffff;
         }
 
-        .not-found-image {
-          max-width: 500px;
+        .not-found-container {
+          width: 700px;
         }
-      `]}static get properties(){return{}}constructor(){super()}render(){return n.c`
-      <img
-        src="https://res.cloudinary.com/dlmrvaeyh/image/upload/v1633836982/404.png"
-        class="not-found-image"
-      />
-    `}}customElements.define("view-404",i)}}]);
+      `]}static get properties(){return{}}constructor(){super()}render(){return s.c`
+      <div class="not-found-container">
+        ${i.b}
+      </div>
+    `}}customElements.define("view-404",o)}}]);
