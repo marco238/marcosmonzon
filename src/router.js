@@ -7,7 +7,7 @@ import "./views/main-view";
  * @param {object} HTML node to host components
  */
 export const initRouter = (node) => {
-  const router = new Router(node, { baseUrl: "" });
+  const router = new Router(node);
 
   router.setRoutes([
     {
