@@ -11,7 +11,7 @@
     "dev": "webpack-dev-server --env.mode development --open",
     "test": "karma start --coverage",
     "lint": "eslint \"src/**/*.js\"",
-    "build": "webpack --env.mode production",
+    "build": "webpack --env.mode production && cp _redirects dist/",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
