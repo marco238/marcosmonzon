@@ -25,7 +25,7 @@
     "@babel/preset-env": "^7.6.3",
     "@open-wc/building-rollup": "^0.21.0",
     "@open-wc/testing": "^2.0.0",
-    "@open-wc/testing-karma": "^3.0.0",
+    "@open-wc/testing-karma": "^4.0.9",
     "@webpack-cli/serve": "^0.1.8",
     "babel-eslint": "^10.0.3",
     "chalk": "^2.4.2",
